@@ -1,34 +1,70 @@
 body {
   margin: 0;
   overflow: hidden;
-  background-color: black;
+  background: black;
+  font-family: 'Verdana', sans-serif;
 }
 
 canvas {
-  display: block;
   position: absolute;
   top: 0;
   left: 0;
+  display: block;
+  z-index: 0;
 }
 
 .Happy_Birthday {
-  margin: 0;
   position: absolute;
-  font: 24px Verdana, sans-serif;
-  color: #eee;
-  height: 25px;
-  top: calc(100vh - 40px);
+  top: 50%;
   left: 50%;
-  transform: translateX(-50%);
-  text-shadow: 2px 2px 4px #ff69b4, 0 0 10px #fff;
-  animation: glow 1s infinite alternate;
+  transform: translate(-50%, -50%);
+  font-size: 48px;
+  color: white;
+  text-shadow: 0 0 10px #fff, 0 0 20px #ff69b4, 0 0 30px #ff1493;
+  z-index: 2;
+  animation: glow 1.5s ease-in-out infinite alternate;
 }
 
 @keyframes glow {
   from {
-    text-shadow: 0 0 10px #fff, 0 0 20px #ff69b4;
+    text-shadow: 0 0 10px #ff69b4, 0 0 20px #ff69b4;
   }
   to {
     text-shadow: 0 0 20px #fff, 0 0 30px #ff1493;
   }
+}
+
+#playButton {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+  padding: 12px 24px;
+  background: #ff69b4;
+  border: none;
+  border-radius: 30px;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+  box-shadow: 0 0 10px #ff69b4;
+}
+.page-link {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 20px;
+  color: white;
+  background-color: #ff69b4;
+  padding: 10px 20px;
+  border-radius: 20px;
+  text-decoration: none;
+  z-index: 10;
+  box-shadow: 0 0 10px #ff69b4;
+  transition: background 0.3s;
+}
+
+.page-link:hover {
+  background-color: #ff1493;
 }
