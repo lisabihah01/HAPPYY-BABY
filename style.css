@@ -1,0 +1,34 @@
+body {
+  margin: 0;
+  overflow: hidden;
+  background-color: black;
+}
+
+canvas {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.Happy_Birthday {
+  margin: 0;
+  position: absolute;
+  font: 24px Verdana, sans-serif;
+  color: #eee;
+  height: 25px;
+  top: calc(100vh - 40px);
+  left: 50%;
+  transform: translateX(-50%);
+  text-shadow: 2px 2px 4px #ff69b4, 0 0 10px #fff;
+  animation: glow 1s infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #ff69b4;
+  }
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #ff1493;
+  }
+}
